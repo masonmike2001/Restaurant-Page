@@ -1,1 +1,1 @@
-console.log("This is an alert.");
+console.log("Webpack is correctly installed. -M"),document.querySelector(".page-switcher");
