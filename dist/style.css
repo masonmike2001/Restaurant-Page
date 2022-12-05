@@ -63,3 +63,50 @@ hr {
 h3 {
     margin: 15px 100px;
 }
+
+button {
+    cursor: pointer;
+}
+
+.page-btn {
+    position: fixed;
+    top: 45%;
+    bottom: 45%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.page-btn.left {
+    left: 0;
+
+}
+
+.page-btn.right {
+    right: 0;
+
+}
+
+.inactive {
+    display: none;
+}
+
+#indicator-row {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    gap: 10px;
+}
+
+.page-indicator {
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(84, 84, 84);
+}
+
+.focus {
+    background-color:  aliceblue !important;
+}
+
+
