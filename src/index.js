@@ -2,6 +2,8 @@ import loadFrontPage from './frontpage.js';
 import loadMenuPage from './menupage.js';
 import loadResPage from './reservationpage.js';
 
+//node-nightly --inspect ./index.js
+//npx webpack --watch
 console.log("Webpack is correctly installed. -M");
 const content = document.querySelector('#content');
 let currentPage = 0;
@@ -61,6 +63,18 @@ function initPageIndicators() {
 
     
     //bottom dots, hovering = popup w/ name
-  
+    let pageIndicators = [];
+    let indicatorRow = document.createElement('div');
+    indicatorRow.id = 'indicator-row';
+    content.appendChild(indicatorRow);
+    for (let i = 0; i < 3; i++)
+    {
+      pageIndicators[i] = document.createElement('button');
+      pageIndicators[i].classList.add('page-indicator');
+      indicatorRow.appendChild(pageIndicators[i]);
+    }
+
+    
+    //TODO
 }
 
