@@ -30,14 +30,12 @@ function pageOnLoad(destination) {
     }
 }
 
-
 //initializes page indicators (side of site and bottom dots), and appends in DOM. 
 //Creates e listener to call onPageSwitch w/ parameters
 //these are outside scope of the page switch. Only change
 function initPageIndicators() {
     //checks if there are page indicators, and if there aren't, creates them
     //if (!document.querySelector('.page-switcher')) return;
-
     //side indicators (next, prev)
     let pageBtns = []; 
     let tabRow = document.createElement('div');
@@ -58,10 +56,6 @@ function initPageIndicators() {
         }
         tabRow.appendChild(pageBtns[i]);
     }
-
-
-
-    
     //bottom dots, hovering = popup w/ name
     let pageIndicators = [];
     let indicatorRow = document.createElement('div');
@@ -73,8 +67,5 @@ function initPageIndicators() {
       pageIndicators[i].classList.add('page-indicator');
       indicatorRow.appendChild(pageIndicators[i]);
     }
-
-    
-    //TODO
 }
 

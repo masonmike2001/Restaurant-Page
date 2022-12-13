@@ -1,7 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #d2ccb1;
+
     margin: 0;
+    color: aliceblue;
     /*
     
     */
@@ -16,20 +20,34 @@ body {
 
 h1 {
     color: #fef7d8;
+    font-size: 1.4rem;
+    padding-top: -20px;
 }
+
+
 .header {
-    background-color: #eda909;
+    background-color: #ffb300af;
     width: 100%;
     padding-top: 20px;
-    border-bottom: #8ce0eb solid 2px;
+    height: 15vh;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-around;
+
 }
 
 .header>* {
     margin: auto;
     display: block;
     text-align: center;
+    width: 100vw;
+    padding: 20px;
 }
 
+.section {
+    display: flex;
+    height: 79vh;
+}
 .row {
     display: flex;
     flex-direction: row;
@@ -39,20 +57,18 @@ h1 {
 }
 
 .medium-img {
-    max-width: 200px;
+    max-width: 100px;
 }
 
 .small-img {
     max-width: 100px;
 }
 
-.medium-img.circle {
-    margin: 30px auto;
-}
+
 
 .circle {
     border-radius: 150px;
-    border: #8ce0eb solid 3px;
+
 }
 
 hr {
@@ -99,7 +115,7 @@ button {
 }
 
 .page-indicator {
-    border: none;
+    border: white solid 2px;
     border-radius: 10px;
     padding: 5px;
     background-color: rgb(84, 84, 84);
@@ -109,4 +125,46 @@ button {
     background-color:  aliceblue !important;
 }
 
+.section {
+display: flex;
+flex-direction: column;
+}
 
+#branding {
+    background-image: url('../assets/hamback.jpg');
+    width: 100vw;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pic-text {
+    filter: drop-shadow(1px 1px 2px black);
+}
+
+.center {
+    display: block;
+    margin: 64px;
+    font-size: 3rem;
+}
+
+.center-img {
+    border: white dashed 2px;
+    margin-top: -13px;
+}
+
+.button {
+    width: 25vw;
+    height: 50px;
+    font-size: 2rem;
+    background-color:#080808;
+    margin: auto;
+    border-radius: 5px;
+    color: aliceblue;
+    border: none;
+}
+
+#reservation-btn {
+    margin-top: 50px;
+}
