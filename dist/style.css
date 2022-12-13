@@ -20,20 +20,37 @@ body {
 
 h1 {
     color: #fef7d8;
-    font-size: 1.4rem;
-    padding-top: -20px;
+    font-size: 1.2rem;
+
 }
 
 
-.header {
-    background-color: #ffb300af;
+.menu-background {
+    background-color: #ffb30095;
     width: 100%;
-    padding-top: 20px;
     height: 15vh;
     min-height: 200px;
     display: flex;
     justify-content: space-around;
+    padding: 5px;
 
+
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    border: white dashed 1px;
+    margin: auto;
+    padding: 10px;
+}
+
+.menu>h2 {
+    margin-top: 115px;
+    font-size: 1.0rem;
 }
 
 .header>* {
@@ -128,6 +145,7 @@ button {
 .section {
 display: flex;
 flex-direction: column;
+
 }
 
 #branding {
@@ -139,19 +157,21 @@ flex-direction: column;
     background-attachment: fixed;
 }
 
+.center-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .pic-text {
-    filter: drop-shadow(1px 1px 2px black);
+    filter: drop-shadow(1px 1px 1px black);
+    font-size: 1.3rem;
 }
 
 .center {
     display: block;
     margin: 64px;
-    font-size: 3rem;
-}
 
-.center-img {
-    border: white dashed 2px;
-    margin-top: -13px;
 }
 
 .button {
@@ -167,4 +187,20 @@ flex-direction: column;
 
 #reservation-btn {
     margin-top: 50px;
+}
+
+#menu-btn {
+margin-top: -280px;
+}
+
+#hours {
+    color:rgb(84, 84, 84)
+}
+
+#hours-list {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
