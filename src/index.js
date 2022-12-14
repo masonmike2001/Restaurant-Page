@@ -7,11 +7,14 @@ import loadResPage from './reservationpage.js';
 console.log("Webpack is correctly installed. -M");
 const content = document.querySelector('#content');
 let currentPage = 0;
+rigButtons();
 pageOnLoad(currentPage);
+
 
 //func for when user first loads or clicks next/prev page or num dot, 
 //to switch between 3 DOM configurations after removing prev children (except for page indicators)
 function pageOnLoad(destination) {
+    if (content.firstChild) removeAllChildren();
     initPageIndicators();
     switch(destination) {
         case 0:
@@ -34,7 +37,7 @@ function pageOnLoad(destination) {
 //Creates e listener to call onPageSwitch w/ parameters
 //these are outside scope of the page switch. Only change
 function initPageIndicators() {
-    //checks if there are page indicators, and if there aren't, creates them
+    //page indicators, creates them
     //if (!document.querySelector('.page-switcher')) return;
     //side indicators (next, prev)
     let pageBtns = []; 
@@ -69,3 +72,28 @@ function initPageIndicators() {
     }
 }
 
+function rigButtons()
+{
+  const menuLinks = document.querySelectorAll('.menu-link');
+  const buttons = document.querySelectorAll('.button');
+  console.log(menuLinks.length);
+  for (let i = 0; i < menuLinks.length; i++)
+  {
+    menuLinks[i].addEventListener('click', function(e) {
+      console.log('i = ' + i);
+      pageOnLoad(i);
+    });
+    
+    /*
+    menuLinks[i].addEventListener('onclick', function(e) {
+
+    });
+    */
+  }
+}
+
+function removeAllChildren() {
+  while (content.firstChild) {
+    content.removeChild(content.lastChild);
+  }
+}
