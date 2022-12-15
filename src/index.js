@@ -8,7 +8,6 @@ import loadContactPage from './contactpage.js';
 const content = document.querySelector('#content');
 pageOnLoad(0);
 
-
 //func for when user first loads or clicks next/prev page or num dot, 
 //to switch between 3 DOM configurations after removing prev children (except for page indicators)
 function pageOnLoad(destination) {
@@ -21,17 +20,42 @@ function pageOnLoad(destination) {
           loadFrontPage();
           document.querySelector('.left').classList.add('inactive');
           document.querySelector('.right').classList.remove('inactive');
+          for (let i = 0; i < 4; i++)
+          {
+            document.querySelectorAll('.page-indicator')[i].classList.remove('focus');
+          }
+          document.querySelectorAll('.page-indicator')[0].classList.add('focus');
+
+          let button = document.querySelector('.button');
+          button.addEventListener('click', function() {
+            pageOnLoad(2);
+          });
           break;
         case 1:
           loadMenuPage();
+          for (let i = 0; i < 4; i++)
+          {
+            document.querySelectorAll('.page-indicator')[i].classList.remove('focus');
+          }
+          document.querySelectorAll('.page-indicator')[1].classList.add('focus');
           break;
         case 2:
           loadResPage();
+          for (let i = 0; i < 4; i++)
+          {
+            document.querySelectorAll('.page-indicator')[i].classList.remove('focus');
+          }
+          document.querySelectorAll('.page-indicator')[2].classList.add('focus');
           break;
         case 3:
           loadContactPage();
           document.querySelector('.right').classList.add('inactive');
           document.querySelector('.left').classList.remove('inactive');
+          for (let i = 0; i < 4; i++)
+          {
+            document.querySelectorAll('.page-indicator')[i].classList.remove('focus');
+          }
+          document.querySelectorAll('.page-indicator')[3].classList.add('focus');
           break;
     }
 }
@@ -67,7 +91,7 @@ function initPageIndicators() {
     let indicatorRow = document.createElement('div');
     indicatorRow.id = 'indicator-row';
     content.appendChild(indicatorRow);
-    for (let i = 0; i < 3; i++)
+    for (let i = 0; i < 4; i++)
     {
       pageIndicators[i] = document.createElement('button');
       pageIndicators[i].classList.add('page-indicator');
@@ -78,11 +102,10 @@ function initPageIndicators() {
 function rigButtons()
 {
   const menuLinks = document.querySelectorAll('.menu-link');
-  const buttons = document.querySelectorAll('.button');
   console.log(menuLinks.length);
   for (let i = 0; i < menuLinks.length; i++)
   {
-    menuLinks[i].addEventListener('click', function(e) {
+    menuLinks[i].addEventListener('click', function() {
       pageOnLoad(i);
     });
   }
@@ -102,7 +125,6 @@ function initMenuHeader()
     divs[1].classList.add('menu-background');
     divs[2].classList.add('menu');
     divs[3].classList.add('center-img');
-
     for (let j = 0; j < 4; j++)
     {
       headers[j] = document.createElement('h2');
