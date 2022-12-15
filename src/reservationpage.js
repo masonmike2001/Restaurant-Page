@@ -1,5 +1,5 @@
 const loadResPage = () => {
-    let x = 0;
+    console.log("Loads reservation page");
 };
 
 export default loadResPage;

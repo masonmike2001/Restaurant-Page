@@ -1,5 +1,5 @@
 const loadMenuPage = () => {
-    let x = 0;
+    console.log("Loads menu page");
 };
 
 export default loadMenuPage;
