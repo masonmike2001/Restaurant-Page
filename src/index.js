@@ -95,6 +95,9 @@ function initPageIndicators() {
     {
       pageIndicators[i] = document.createElement('button');
       pageIndicators[i].classList.add('page-indicator');
+      pageIndicators[i].addEventListener('click', function () {
+        pageOnLoad(i)
+      });
       indicatorRow.appendChild(pageIndicators[i]);
     }
 }
@@ -147,7 +150,7 @@ function initMenuHeader()
 
     let logo = document.createElement('img');
     let title = document.createElement('h1');
-    title.textContent = 'Gekdonalds';
+    title.textContent = 'GekDonalds';
     logo.classList.add('medium-img');
     logo.classList.add('circle');
     logo.src = '../assets/geck.png';

@@ -47,6 +47,9 @@ h1 {
     font-size: 1.2rem;
 }
 
+.header {
+    position: absolute;
+}
 .header>* {
     margin: auto;
     display: block;
@@ -101,6 +104,7 @@ button, .menu-link:hover {
     padding: 5px;
     border: none;
     border-radius: 5px;
+    visibility: hidden;
 }
 
 .page-btn.left {
@@ -147,14 +151,19 @@ flex-direction: column;
     background-repeat: no-repeat;
     background-attachment: fixed;
     backdrop-filter: invert(80%);
+    border-bottom: #ffb300f0 solid 10px;
 }
 
 #branding>h1{
     margin-top: 180px;
 }
 
+/*
+FRONT
+*/
+
 #reservation-btn {
-    margin-top: -490px;
+    margin-bottom: 25.5%;
 }
 
 .center-img {
@@ -201,4 +210,28 @@ flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+/*
+MENU
+*/
+
+#menu-sheet {
+    width: 60%;
+    height: 40vh;
+    
+    min-height: 377px;
+    min-width: 924px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    margin: 50px auto;
+    border-radius: 5px;
+}
+
+.grid-square>* {
+    color: #080808;
+    text-align: center;
+
 }
