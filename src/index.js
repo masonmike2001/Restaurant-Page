@@ -133,7 +133,7 @@ function initMenuHeader()
     title.textContent = 'GekDonalds';
     logo.classList.add('medium-img');
     logo.classList.add('circle');
-    logo.src = '../assets/geck.png';
+    logo.src = 'assets/geck.png';
     logo.alt = 'gizmo';
 
     divs[3].appendChild(logo);
