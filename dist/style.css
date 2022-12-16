@@ -38,7 +38,6 @@ h1 {
     gap: 100px;
     align-items: center;
     border: white dashed 1px;
-    margin: auto;
     padding: 10px;
 }
 
@@ -50,6 +49,7 @@ h1 {
 .header {
     position: absolute;
 }
+x
 .header>* {
     margin: auto;
     display: block;
@@ -86,7 +86,7 @@ h1 {
 
 hr {
     width: 90%;
-    border: #8ce0eb solid 1px;
+    border: #ffb300f0 solid 1px;
 }
 
 h3 {
@@ -95,28 +95,6 @@ h3 {
 
 button, .menu-link:hover {
     cursor: pointer;
-}
-
-.page-btn {
-    position: fixed;
-    top: 45%;
-    bottom: 45%;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    visibility: hidden;
-}
-
-.page-btn.left {
-    left: 0;
-}
-
-.page-btn.right {
-    right: 0;
-}
-
-.inactive {
-    display: none;
 }
 
 #indicator-row {
@@ -227,11 +205,11 @@ MENU
     align-items: center;
     background-color: whitesmoke;
     margin: 50px auto;
-    border-radius: 5px;
+    border-radius: 15px;
+    border: #ffb300f0 solid 5px;
 }
 
 .grid-square>* {
     color: #080808;
     text-align: center;
-
 }

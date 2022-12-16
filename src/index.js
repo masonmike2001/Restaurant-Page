@@ -66,26 +66,6 @@ function pageOnLoad(destination) {
 function initPageIndicators() {
     //page indicators, creates them
     //if (!document.querySelector('.page-switcher')) return;
-    //side indicators (next, prev)
-    let pageBtns = []; 
-    let tabRow = document.createElement('div');
-    tabRow.id = 'tab-row';
-    content.appendChild(tabRow);
-    console.log('Before for');
-    for (let i = 0; i < 2; i++)
-    {
-        pageBtns[i] = document.createElement('button');
-        pageBtns[i].classList.add("page-btn");
-        if (i === 0)
-        {
-          pageBtns[i].classList.add('left');
-        }
-        else
-        {
-          pageBtns[i].classList.add('right');
-        }
-        tabRow.appendChild(pageBtns[i]);
-    }
     //bottom dots, hovering = popup w/ name
     let pageIndicators = [];
     let indicatorRow = document.createElement('div');
